@@ -11,6 +11,7 @@ console.log(isEmpty(schedule));
 }
 
 function practice2(){
+    let a = 1
     user = {
         name : "myName",
         "getName": "otherName"
