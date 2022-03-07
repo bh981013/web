@@ -49,10 +49,35 @@ function p3(){
 
 }
 
+//원시 자료형에 프로퍼티를 설정할수 있는지 확인
 function p4(){
-
     let str = "hi";
     str.test = 5;
     console.log(str.test);
 }
-p4();
+
+
+// 사용자가 유효한 숫자를 입력할 때 까지 입력받기
+function p5(){
+    readNumber();
+    function readNumber(){
+        let a;
+        while(a= prompt()){
+          if(isFinite(a)) return +a;
+        }
+        return null;
+      }
+}
+//null의 형변환 확인
+function p6(){
+    console.log(null == null)
+    console.log(null === null)
+    console.log(null == undefined)
+    console.log(null === undefined)
+    console.log(!null);
+}
+
+p5();
+
+
+//프라미스 부분 정확하게!!
