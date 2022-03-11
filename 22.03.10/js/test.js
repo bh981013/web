@@ -28,8 +28,7 @@ function p2(){
 
 function p3(){
     function load(src){
-        alert("load 실행");
-        return new Promise(function(resolve, reject){
+        function f(resolve, reject){
             alert("exec 실헹");
             let script = document.createElement('script');
             script.src = src;
@@ -38,7 +37,9 @@ function p3(){
             alert("종료");
             document.head.append(script);
             
-        })
+        }
+        alert("load 실행");
+        return new Promise(f)
     }
     let p = load(`https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js`);
     p.then(a=>alert(a.src), a => alert(`msg: ${a.message}`));
@@ -70,4 +71,4 @@ function p4(){
     promise.then(script => alert('또다른 핸들러...'));
 }
 
-p4();
+p3();
