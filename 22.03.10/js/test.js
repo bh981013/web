@@ -49,13 +49,13 @@ function p3(){
 function p4(){
     function loadScript(src) {
         alert("load");
-        return new Promise(function(a, b) {
+        return new Promise(function(a, b) { // 파라미터 이름을 reject, resolve가 아닌 다른 이름으로 해도 동작함.
             alert("exec");  
           let script = document.createElement('script');
           script.src = src;
       
-          script.onload = () => a(script);
-          script.onerror = () => reject(new Error(`${src}를 불러오는 도중에 에러가 발생함`));
+          script.onload = () => a(script);  // resolve() 를 호출한 것과 같은 효과
+          script.onerror = () => reject(new Error(`${src}를 불러오는 도중에 에러가 발생함`));   //reject() 동작하지 않음
       
           document.head.append(script);
           setTimeout(()=> alert("done"), 5000);

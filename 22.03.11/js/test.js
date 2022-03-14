@@ -10,7 +10,6 @@ function p1() {
 
     let p= new Promise(exec);
     p.then((a)=>console.log(`s: ${a}`)).catch((a)=>console.log(`${a}, fail`));
-
 }
 
 function p2(){
@@ -66,4 +65,33 @@ function p3(){
 
 }
 
-p2();
+
+
+console.log("A");
+
+//
+Promise.resolve() //
+    .then(() => {
+        //
+        console.log("B");
+        //
+    }, () => {
+        //
+        console.log("C");
+        //
+    }).catch(() => {
+        //
+        console.log("D");
+        //
+    }).then(() => {
+        //
+        console.log("E");
+        //
+    }, () => {
+        //
+        console.log("F");
+        //
+    });
+//
+
+console.log("G");
