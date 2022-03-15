@@ -1,6 +1,6 @@
 const { MongoClient } = require("mongodb");
 
-const url = "mongodb+srv://dbwj:qlalfqjsgh@db1.3hvit.mongodb.net/db1?retryWrites=true&w=majority";
+const url = `mongodb+srv://${id}:${pw}@db1.3hvit.mongodb.net/${dbName}?retryWrites=true&w=majority`;
 const client = new MongoClient(url);
 const dbName = "db1";
 async function run(){
