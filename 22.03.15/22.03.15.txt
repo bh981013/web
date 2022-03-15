@@ -1,0 +1,12 @@
+03/15 
+
+실습내용
+- MongoDB shell 환경에서 query 연습
+ 1. find() 를 사용한 쿼리: 
+  - element가 list 일때 elemMatch를 통한 검색
+	```
+	
+
+  - "array.1" 통한 리스트 접근
+
+	

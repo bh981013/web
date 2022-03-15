@@ -1,0 +1,249 @@
+//q9
+
+db.restaurants.find( { "grades.score": {$gt: 80, $lt: 90} })
+-> x
+
+db.restaurants.find({grades : { $elemMatch:{"score":{$gt : 80 , $lt :90}}}});
+-> o
+
+
+//q10
+
+db.restaurants.find({"address.coord.1": {$lt: -95}})
+
+//q11
+
+db.restaurants.find({
+	"cuisine": {$ne : "American "},
+	"grades.score": {$gt: 70},
+	"address.coord": {$lt: -65}
+})
+
+db.restaurants.find(
+               {$and:
+                    [
+                       {"cuisine" : {$ne :"American "}},
+                       {"grades.score" : {$gt : 70}},
+                       {"address.coord" : {$lt : -65.754168}}
+                    ]
+                }
+                    );
+
+
+db.restaurants.find({
+               
+                    
+                       "cuisine" : {$ne :"American"},
+                       "grades.score" : {$gt : 70},
+                       "address.coord" : {$lt : -65.754168}
+                    
+                
+                   } );
+
+
+//q13
+db.restaurants.find({
+	"cuisine": {$ne: "American"},
+	"grades.grade": "A",
+	"borough": {$ne: "Brooklyn"}
+}).sort({"cuisine": -1})
+
+//q14
+db.restaurants.find({
+	"name": {$regex: /^Wil/}
+},{
+	"restaurant_id":1,
+	"name": 1,
+	"borough": 1,
+	"cuisine": 1,
+})
+
+//q17
+
+db.restaurants.find({
+	"borough": "Bronx",
+	$or : [ {"cuisine": "American"}, {"cuisine": "Chinese"}]
+},{
+	"borough": 1,
+	"cuisine": 1,
+	"_id": 0
+})
+
+
+db.restaurants.aggregate([{$group: {_id: "$borough"}}])
+
+//q18
+
+db.restaurants.find({
+	"borough" :  {$in:[/.taten .sland/, "Queens", "Bronxor", "Brooklyn"]}
+},{"borough":1})
+
+//q19
+
+
+db.restaurants.find({
+	"borough" :  {$nin:[/.taten .sland/, "Queens", "Bronxor", "Brooklyn"]}
+},{"borough":1})
+
+
+//q20
+1)한개라도 10점 이하면 선택
+
+db.restaurants.find({
+	"grades.score": {$lte: 10}	
+}, {
+	"grades.score": 1,
+	"_id": 0,	
+})
+
+2)모두가 10점 이하면 선택
+
+db.restaurants.find(
+{"grades.score" : 
+{ $not: 
+{$gt : 10}
+}
+},
+{
+"grades.score": 1,
+	"_id": 0,	
+}
+);
+
+
+//q21
+db.restaurants.find({
+	$or: [
+		{"name": /^Wil/},
+		{"cuisine": {$nin: ["American", "Chinese"]}}
+	]
+},{
+	"name": 1,
+	"cuisine": 1,
+	"_id":0,
+}).sort("cuisine")
+
+//q22
+db.restaurants.find( 
+                      { "grades.1.date": ISODate("2014-08-11T00:00:00Z"), 
+                        "grades.1.grade":"A" , 
+                        "grades.1.score" : 9
+                      }, 
+                       {"grades" : 1}
+                   );
+
+//q28
+
+db.restaurants.find({
+	
+})
+
+
+
+
+
+//quiz
+
+db.Reservation.insertMany([{
+	"canceled": true,
+	"bookedDate": "20220311",
+	"serviceCost": 20000,
+},
+{
+	"canceled": true,
+	"bookedDate": "20220312",
+	"serviceCost": 22000,
+},
+{
+	"canceled": true,
+	"bookedDate": "20220313",
+	"serviceCost": 21000,
+},
+{
+	"canceled": true,
+	"bookedDate": "20220311",
+	"serviceCost": 31000,
+},
+{
+	"canceled": true,
+	"bookedDate": "20220312",
+	"serviceCost": 31000,
+},
+{
+	"canceled": true,
+	"bookedDate": "20220313",
+	"serviceCost": 34000,
+},
+{
+	"canceled": true,
+	"bookedDate": "20220312",
+	"serviceCost": 35000,
+},
+{
+	"bookedDate": "20220312",
+	"serviceCost": 20000,
+},
+{
+	"bookedDate": "20220311",
+	"serviceCost": 20000,
+},
+{
+	"bookedDate": "20220312",
+	"serviceCost": 22000,
+},
+{
+	"bookedDate": "20220313",
+	"serviceCost": 21000,
+},
+{
+	"bookedDate": "20220311",
+	"serviceCost": 31000,
+},
+{
+	"bookedDate": "20220312",
+	"serviceCost": 31000,
+},
+{
+	
+	"bookedDate": "20220313",
+	"serviceCost": 34000,
+},
+{
+	
+	"bookedDate": "20220312",
+	"serviceCost": 35000,
+},
+{
+	
+	"bookedDate": "20220312",
+	"serviceCost": 20000,
+}]
+
+
+)
+
+
+//q1
+
+db.Reservation.find({
+	"canceled": {$exists: false},
+	"bookedDate": "20220311",
+	"serviceCost" : { $gte : 20000, $lt: 30000},
+})
+
+
+//q2
+db.Reservation.aggregate([{
+	$match: {
+	"canceled": {$exists: false},
+	"bookedDate": "20220311",
+	}
+},{
+	$group:{
+		"_id": null,
+		"Max": {$max : "$serviceCost"},
+		"Min": {$min : "$serviceCost"}
+	}	
+}]).projection({_id: 0})
+
+
