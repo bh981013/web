@@ -20,16 +20,17 @@ async function run(){
         
         //question 9
         query = {
-            $and: [ {"grades.score": {$gte: 80}}, {"grades.score": {$lte: 90}} ] 
+           // $and: [ {"grades.score": {$gte: 80}}, {"grades.score": {$lte: 90}} ] 
         }
         project = {
             
         };
 
         //send query
-        const myDoc = await db.collection("restaurants").find(query).project(project).limit(5);
-       
-        await myDoc.forEach(d => console.log(d));
+        const myDoc = await db.collection("restaurants").find(query).project(project).limit(5).toArray();
+        console.log(myDoc.map(({name}) => name));
+
+        //await myDoc.forEach(d => console.log(d));
         
         //console.log(myDoc);n
     }

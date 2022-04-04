@@ -1,0 +1,16 @@
+Current Mongosh Log ID:	6232cf0eb3ca5e65e1c75fdf
+Connecting to:		mongodb+srv://ds021809.g1rhi.mongodb.net/boricha-stage?appName=mongosh+1.2.3
+Using MongoDB:		4.2.19
+Using Mongosh:		1.2.3
+
+For mongosh info see: [1mhttps://docs.mongodb.com/mongodb-shell/[0m
+
+Loading file: hello.js
+ID,이름,전화번호,접종백신,접종차수,인증일,인증횟수
+HWob7po4pI,__hk__배지영__,__hk__01036900963__,아스트라제네카,2,20211028,1
+J2Ri7sb8GC,__hk__배지영__,__hk__01025256262__,아스트라제네카,1,20210513,1
+MeZP7W3fCU,김겨울,010-9876-9876,노바벡스,3,20220114,2
+fBCldUpq4b,가사리뷰많음,010-3636-3636,아스트라제네카,2,20210709,2
+kaZmwxWQI8,222,010-755-6098,아스트라제네카,2,20210704,2
+whceNcUuuB,__hk__배지영__,__hk__01025466452__,노바벡스,2,20211029,1
+xKnbnOz65W,a,010-6098-6098,아스트라제네카,2,20210706,1

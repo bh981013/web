@@ -1,0 +1,44 @@
+Atlas atlas-5zrttj-shard-0 [primary] boricha-stage> 
+Atlas atlas-5zrttj-shard-0 [primary] boricha-stage> 
+Atlas atlas-5zrttj-shard-0 [primary] boricha-stage> ... ..... ..... ..... ... ... 
+Atlas atlas-5zrttj-shard-0 [primary] boricha-stage> 
+Atlas atlas-5zrttj-shard-0 [primary] boricha-stage> 
+Atlas atlas-5zrttj-shard-0 [primary] boricha-stage> ... ... ... ... ... 
+Atlas atlas-5zrttj-shard-0 [primary] boricha-stage> 
+Atlas atlas-5zrttj-shard-0 [primary] boricha-stage> 
+Atlas atlas-5zrttj-shard-0 [primary] boricha-stage> ... ... ... ... ... 
+Atlas atlas-5zrttj-shard-0 [primary] boricha-stage> 
+Atlas atlas-5zrttj-shard-0 [primary] boricha-stage> ... ... 
+Atlas atlas-5zrttj-shard-0 [primary] boricha-stage> 
+Atlas atlas-5zrttj-shard-0 [primary] boricha-stage> ... ... ... 
+Atlas atlas-5zrttj-shard-0 [primary] boricha-stage> 
+Atlas atlas-5zrttj-shard-0 [primary] boricha-stage> ... ... ... ... ... ... 20161003, 200000, 180000, 20000, 정상, 복, 복해든누리, 20
+20161003, 500000, 450000, 50000, 취소, 이름, 조현래, 50
+20161010, 200000, 180000, 20000, 취소, i창민, 서창민, 20
+20161022, 330000, 297000, 33000, 취소, 이름, 조현래, 33
+20161127, 210000, 189000, 21000, 취소, i창민, 한승구, 21
+20170531, 200000, 180000, 20000, 취소, 김윤정, 김준현, 1
+20161014, 210000, 189000, 21000, 취소, i창민, 서창민, 21
+20171120, 200000, 180000, 20000, 취소, 슈퍼건호, 허현, 3
+20171127, 200000, 180000, 20000, 정상, 이준호, 허현, 15
+20171220, 200000, 180000, 20000, 취소, 다니, 류해정, 0
+20161003, 220000, 198000, 22000, 정상, i창민, 서창민, 22
+20171107, 200000, 180000, 20000, 정상, 황동진, 허현, 20
+20171221, 430000, 387000, 43000, 정상, 허현, 서창민, 43
+20161116, 200000, 180000, 20000, 취소, 복, 조현래, 13
+20171129, 200000, 180000, 20000, 정상, 슈퍼건호, 조현래, 6
+20161006, 330000, 297000, 33000, 취소, 이름, 조현래, 33
+20161020, 300000, 270000, 30000, 취소, 이름, 서창민, 30
+20161013, 530000, 477000, 53000, 취소, 이름, 한승구, 53
+20171231, 200000, 180000, 20000, 취소, 다니, 이서호, 0
+20171231, 200000, 180000, 20000, 취소, 다니, 허현, 0
+20171124, 200000, 180000, 20000, 취소, 슈퍼건호, 조현래, 2
+20171231, 200000, 180000, 20000, 취소, 다니, 이서호, 0
+20171217, 230000, 207000, 23000, 정상, 황동진, 허현, 23
+20161028, 200000, 180000, 20000, 취소, 이름, 심지연, 3
+Uncaught TypeError: Cannot read property 'userFullName' of undefined
+Atlas atlas-5zrttj-shard-0 [primary] boricha-stage> 
+Atlas atlas-5zrttj-shard-0 [primary] boricha-stage> 1451
+
+Atlas atlas-5zrttj-shard-0 [primary] boricha-stage> 
+Atlas atlas-5zrttj-shard-0 [primary] boricha-stage> 
