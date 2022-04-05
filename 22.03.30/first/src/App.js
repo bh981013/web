@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import Subject from './Subject';
+//하나의 최상위태그
+//js 가 아닌, 유사 js = jsx
 
-function App() {
-  return (
+
+class Article extends Component{
+  render(){
+    return (
+      <article>
+        <ul>
+            <li>web1</li>
+            <li>web2</li>
+            <li>web3</li>
+        </ul>
+        <ol>
+            <li> num1</li>
+            <li>num2</li>
+        </ol>
+    </article>
+    )
+  }
+
+}
+
+class App extends Component {
+  render(){
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Subject title = "NEW TITLE"></Subject>
+      <Article></Article>
     </div>
-  );
+    )
+  }
 }
 
 export default App;
