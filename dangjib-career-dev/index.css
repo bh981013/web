@@ -1,0 +1,104 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.header {
+    margin-right: 0px;
+    margin-left: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-menu {
+    margin: 20px;
+    width: 100px;
+    text-align: center;
+}
+
+.introduce {
+    height: 650px;
+    display: grid;
+    grid-template-rows: 3fr 4fr 7fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: ". intro-comp-img" "intro-comp-text intro-comp-img" "button intro-comp-img";
+    background-color: #FFEBA8;
+}
+
+.intro-text {
+    grid-area: intro-comp-text;
+    text-align: left;
+    padding-left: 20%;
+    font-size: 3vw;
+    line-height: 300%;
+    z-index: 1;
+    word-break: keep-all;
+}
+
+.intro-text>.text1 {
+    font-size: 65px;
+}
+
+.intro-text>.text2 {
+    font-size: 50px;
+    font-weight: lighter;
+}
+
+.intro-img {
+    grid-area: intro-comp-img;
+    position: relative;
+    bottom: 0px;
+}
+
+.intro-img>img {
+    position: absolute;
+    width: 600px;
+    right: 5vw;
+    bottom: 0px;
+    z-index: 0;
+}
+
+.intro-btn {
+    grid-area: button;
+    z-index: 1;
+    position: relative;
+}
+
+.intro-btn>.btn {
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 38%;
+    bottom: 43%;
+    background-color: transparent;
+    font-size: large;
+    border-radius: 5px;
+    border: solid;
+    word-break: keep-all;
+}
+
+.intro-btn>.btn:hover {
+    background-color: black;
+    border-color: black;
+    color: #FFEBA8;
+    cursor: pointer;
+}
+
+@media (max-width:900px) {
+    .intro-img>img {
+        width: 150%;
+    }
+    .intro-text>.text1 {
+        font-size: 8vmin;
+    }
+    .intro-text>.text2 {
+        font-size: 6vmin;
+    }
+}
+
+@media(max-width: 400px) {
+    .menu {
+        display: none;
+    }
+}
